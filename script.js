@@ -15,3 +15,22 @@ const winnDecoration0El = document.querySelector('.winn--decoration0');
 const winnDecoration1El = document.querySelector('.winn--decoration1');
 
 //Starting conditions
+
+//Starting conditions
+score0El.textContent = 0;
+score1El.textContent = 0;
+diceEl.classList.add('hidden');
+
+const scores = [0, 0];
+let currentScore = 0;
+let activePlayer = 0;
+let playing = true;
+
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
+// roling dice functionality
